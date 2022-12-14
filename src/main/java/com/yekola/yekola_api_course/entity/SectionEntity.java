@@ -1,10 +1,12 @@
 package com.yekola.yekola_api_course.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "sections")
 @Entity
@@ -17,6 +19,10 @@ public class SectionEntity {
     private Long id;
     @Column(nullable = false)
     private String title;
-    @Column(nullable = false)
-    private int course;
+    @ManyToOne
+    private CourseEntity course;
+
+    @OneToMany(mappedBy = "section" )
+    @JsonIgnore
+    private List<ChapterEntity> chapters;
 }

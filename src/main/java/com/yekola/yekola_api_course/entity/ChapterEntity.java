@@ -19,5 +19,6 @@ public class ChapterEntity {
     private String title;
     @Column(nullable = false)
     private String content;
-    private int section;
+    @ManyToOne
+    private SectionEntity section;
 }

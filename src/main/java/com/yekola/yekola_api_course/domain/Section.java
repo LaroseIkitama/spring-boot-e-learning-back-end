@@ -14,5 +14,5 @@ public class Section {
     @NotNull(message = "The title must not be null")
     private String title;
 
-    private int course;
+    private Course course;
 }

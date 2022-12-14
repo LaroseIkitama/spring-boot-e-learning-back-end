@@ -15,5 +15,6 @@ public class Chapter {
     private String title;
     @NotNull(message = "The content must not be null")
     private String content;
-    private int section;
+
+    private Section section;
 }
