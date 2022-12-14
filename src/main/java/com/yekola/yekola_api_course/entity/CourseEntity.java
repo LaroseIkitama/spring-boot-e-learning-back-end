@@ -31,7 +31,7 @@ public class CourseEntity {
     @Column(nullable = false)
     private int status;
     @Column(nullable = false)
-    private int userId;
+    private int user;
 
 
 

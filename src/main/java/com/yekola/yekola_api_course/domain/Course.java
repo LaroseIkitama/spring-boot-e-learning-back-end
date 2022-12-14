@@ -26,7 +26,7 @@ public class Course {
     @NotNull(message = "The status must not be null")
     private int status;
     @NotNull(message = "The status must not be null")
-    private int userId;
+    private int user;
 
     private Category category;
 }
