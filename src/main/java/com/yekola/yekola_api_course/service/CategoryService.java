@@ -1,7 +1,6 @@
 package com.yekola.yekola_api_course.service;
 
 import com.yekola.yekola_api_course.domain.Category;
-import com.yekola.yekola_api_course.domain.Course;
 import com.yekola.yekola_api_course.exception.EntityNotFoundException;
 import com.yekola.yekola_api_course.exception.RequestException;
 import com.yekola.yekola_api_course.mapper.CategoryMapper;

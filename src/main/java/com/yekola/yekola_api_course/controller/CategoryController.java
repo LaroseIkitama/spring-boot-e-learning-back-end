@@ -1,9 +1,7 @@
 package com.yekola.yekola_api_course.controller;
 
 import com.yekola.yekola_api_course.domain.Category;
-import com.yekola.yekola_api_course.domain.Course;
 import com.yekola.yekola_api_course.service.CategoryService;
-import com.yekola.yekola_api_course.service.CourseService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

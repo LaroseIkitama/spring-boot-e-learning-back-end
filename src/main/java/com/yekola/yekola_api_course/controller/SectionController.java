@@ -1,6 +1,5 @@
 package com.yekola.yekola_api_course.controller;
 
-import com.yekola.yekola_api_course.domain.Course;
 import com.yekola.yekola_api_course.domain.Section;
 import com.yekola.yekola_api_course.service.SectionService;
 import lombok.AllArgsConstructor;
