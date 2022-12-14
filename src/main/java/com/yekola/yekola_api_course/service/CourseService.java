@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
+
 @Slf4j
 @AllArgsConstructor
 @Service
@@ -71,6 +72,12 @@ public class CourseService {
         log.info("Fetching all courses");
 
         return courseRepository.findAll().stream()
+                .map(courseMapper::toCourse)
+                .collect(Collectors.toList());
+    }
+
+    public List<Course> getDraftCourses(){
+        return courseRepository.findByStatus(1).stream()
                 .map(courseMapper::toCourse)
                 .collect(Collectors.toList());
     }

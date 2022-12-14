@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/courses")
 @AllArgsConstructor
@@ -44,4 +45,6 @@ public class CourseController {
         return ResponseEntity.ok().body(courseService.getCourses());
     }
 
+    @GetMapping("draft")
+    public ResponseEntity<List<Course>> getDraftCourses(){return ResponseEntity.ok().body(courseService.getDraftCourses());}
 }

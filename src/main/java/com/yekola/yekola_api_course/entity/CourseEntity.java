@@ -29,5 +29,12 @@ public class CourseEntity {
     @Column(nullable = false)
     private String level;
     @Column(nullable = false)
-    private String status;
+    private int status;
+    @Column(nullable = false)
+    private int userId;
+
+
+
+    @ManyToOne
+    private CategoryEntity category;
 }
