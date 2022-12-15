@@ -14,4 +14,5 @@ public class Category {
     private Long id;
     @NotNull(message = "The name must not be null")
     private String name;
+    private User user;
 }

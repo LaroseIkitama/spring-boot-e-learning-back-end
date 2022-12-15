@@ -68,6 +68,11 @@ public class CourseService {
                         Locale.getDefault()))));
     }
 
+    public Course getFirstCourse(){
+        return courseMapper.toCourse(courseRepository.findFirst());
+    }
+
+
     public List<Course> getCourses(){
         log.info("Fetching all courses");
 

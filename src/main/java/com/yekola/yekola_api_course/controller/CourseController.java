@@ -9,13 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(maxAge = 3600)
+@CrossOrigin()
 @RestController
 @RequestMapping("/courses")
 @AllArgsConstructor
 public class CourseController {
     CourseService courseService;
-
     @PostMapping("create")
     public ResponseEntity<Course> createCourse(@Valid @RequestBody Course course)
     {
@@ -40,6 +39,10 @@ public class CourseController {
         return ResponseEntity.ok().body(courseService.getCourse(id));
     }
 
+    @GetMapping("/first")
+    public ResponseEntity<Course> getFirstCourse(){
+        return ResponseEntity.ok().body(courseService.getFirstCourse());
+    }
     @GetMapping()
     public ResponseEntity<List<Course>> getCourses(){
         return ResponseEntity.ok().body(courseService.getCourses());

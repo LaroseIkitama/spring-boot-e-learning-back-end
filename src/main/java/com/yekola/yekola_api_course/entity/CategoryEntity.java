@@ -20,6 +20,8 @@ public class CategoryEntity {
     private Long id;
     @Column(nullable = false)
     private String name;
+    @ManyToOne
+    private UserEntity user;
     @OneToMany(mappedBy = "category" )
     @JsonIgnore
     private List<CourseEntity> courses;

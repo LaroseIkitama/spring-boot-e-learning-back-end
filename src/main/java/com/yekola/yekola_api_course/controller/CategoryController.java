@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(maxAge = 3600)
+@CrossOrigin()
 @RestController
 @RequestMapping("/categories")
 @AllArgsConstructor
