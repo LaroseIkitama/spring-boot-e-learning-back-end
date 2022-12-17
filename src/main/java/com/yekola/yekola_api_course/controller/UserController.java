@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@CrossOrigin()
+@RestController
 @RequestMapping("/users")
 @AllArgsConstructor
 public class UserController {
@@ -45,5 +46,7 @@ public class UserController {
     public ResponseEntity<List<User>> getUsers(){
         return ResponseEntity.ok().body(userService.getUsers());
     }
+
+
 
 }

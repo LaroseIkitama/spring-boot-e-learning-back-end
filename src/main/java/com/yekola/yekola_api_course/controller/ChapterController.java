@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @CrossOrigin()
+@RestController
 @RequestMapping("/chapters")
 @AllArgsConstructor
 public class ChapterController {

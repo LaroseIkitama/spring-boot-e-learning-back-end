@@ -25,8 +25,8 @@ public class Course {
     private String level;
     @NotNull(message = "The status must not be null")
     private int status;
-    @NotNull(message = "The status must not be null")
-    private int user;
+
+    private User user;
 
     private Category category;
 }

@@ -20,19 +20,30 @@ public class UserEntity {
     private Long id;
     @Column(unique = true,nullable = false)
     private String username;
-
+    @Column()
     private String firstName;
+    @Column()
     private String lastName;
     @Column(unique = true,nullable = false)
     @Email
     private String email;
-    @Column(unique = true,nullable = false)
+    @Column(nullable = false)
     private String password;
-
+    @Column()
     private String biography;
+    @Column()
     private String website;
+    @Column()
     private String role;
+    @Column()
+    private Boolean enabled;
     @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<CategoryEntity> categories;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<CourseEntity> courses;
+
+
 }

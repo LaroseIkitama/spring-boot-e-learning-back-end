@@ -32,8 +32,8 @@ public class CourseEntity {
     private String level;
     @Column(nullable = false)
     private int status;
-    @Column(nullable = false)
-    private int user;
+    @ManyToOne
+    private UserEntity user;
 
     @OneToMany(mappedBy = "course" )
     @JsonIgnore

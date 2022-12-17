@@ -77,5 +77,4 @@ public class UserService {
                 .map(userMapper::toUser)
                 .collect(Collectors.toList());
     }
-
 }
