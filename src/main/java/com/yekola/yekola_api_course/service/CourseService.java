@@ -72,7 +72,6 @@ public class CourseService {
         return courseMapper.toCourse(courseRepository.findFirst());
     }
 
-
     public List<Course> getCourses(){
         log.info("Fetching all courses");
 

@@ -43,6 +43,7 @@ public class CourseController {
     public ResponseEntity<Course> getFirstCourse(){
         return ResponseEntity.ok().body(courseService.getFirstCourse());
     }
+
     @GetMapping()
     public ResponseEntity<List<Course>> getCourses(){
         return ResponseEntity.ok().body(courseService.getCourses());

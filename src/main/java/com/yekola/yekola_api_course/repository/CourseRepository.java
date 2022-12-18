@@ -10,7 +10,6 @@ import java.util.List;
 @RepositoryRestResource(path = "course")
 public interface CourseRepository extends JpaRepository<CourseEntity,Long> {
     List<CourseEntity> findByStatus(int status);
-
     @Query("SELECT c FROM CourseEntity c WHERE c.id=1")
     CourseEntity findFirst();
 }
